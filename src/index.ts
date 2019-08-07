@@ -121,7 +121,7 @@ function resolveWebDependency(dep: string, isExplicit: boolean, isOptimized: boo
   }
   if (dependencyStats.isFile()) {
     const locations: DependencyLoc = {};
-    if (path.extname(dep) === '.css') {
+    if (path.extname(dep) !== '.js') {
       locations.styleLoc = nodeModulesLoc;
     } else {
       locations.depLoc = dep;
